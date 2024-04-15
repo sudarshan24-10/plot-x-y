@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import axios from "axios";
 import Plot from './components/plot';
+import {Helmet} from "react-helmet";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App" style={{position:"relative"}}>
+      <Helmet><title>Plot-X-Y</title></Helmet>
       <h1>Plot X and Y data points</h1>
       <div className='Plot'><Plot xData={xData}  yData={yData}></Plot></div> 
     </div>
